@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "author": "Vlada Musin",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-mega", "id": "mega", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-relay-module", "id": "relay1", "top": -115, "left": 211.2, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": -80.4, "left": 71, "attrs": { "color": "red" } }
+  ],
+  "connections": [
+    [ "relay1:VCC", "mega:5V", "red", [ "h0" ] ],
+    [ "relay1:GND", "mega:GND.1", "black", [ "h0" ] ],
+    [ "relay1:IN", "mega:2", "green", [ "h0", "v67", "h28.8" ] ],
+    [ "led1:C", "mega:GND.2", "green", [ "v259.2", "h19.6" ] ],
+    [ "led1:A", "mega:13", "green", [ "v0", "h28.8" ] ]
+  ],
+  "dependencies": {}
+}
