@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "author": "Vlada Musin",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-mega", "id": "mega", "top": 58.2, "left": 6, "attrs": {} },
+    { "type": "wokwi-hc-sr04", "id": "ultrasonic1", "top": -180.9, "left": 187.9, "attrs": {} }
+  ],
+  "connections": [
+    [ "mega:9", "ultrasonic1:TRIG", "green", [ "v-134.4", "h95.7" ] ],
+    [ "mega:10", "ultrasonic1:ECHO", "green", [ "v-124.8", "h114.9" ] ],
+    [ "ultrasonic1:GND", "mega:GND.1", "black", [ "v38.4", "h-164.2" ] ],
+    [ "mega:5V", "ultrasonic1:VCC", "red", [ "h-55.3", "v-329.1" ] ]
+  ],
+  "dependencies": {}
+}
