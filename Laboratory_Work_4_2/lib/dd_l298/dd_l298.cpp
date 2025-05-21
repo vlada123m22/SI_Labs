@@ -36,12 +36,18 @@ void DD_L298::set_pwm_motor_a(int speed) {
     if (speed < 0) {
         digitalWrite(channelAIn1Pin, HIGH);
         digitalWrite(channelAIn2Pin, LOW);
+        analogWrite(channelAEnPin, abs(speed));
+    } else if (speed == 0) {
+        digitalWrite(channelAIn1Pin, LOW);
+        digitalWrite(channelAIn2Pin, LOW);
+        analogWrite(channelAEnPin, abs(speed));
     } else {
         digitalWrite(channelAIn1Pin, LOW);
         digitalWrite(channelAIn2Pin, HIGH);
+        analogWrite(channelAEnPin, abs(speed));
     }
     
-    analogWrite(channelAEnPin, abs(speed));
+    
 }
 
 void DD_L298::set_pwm_motor_b(int speed) {

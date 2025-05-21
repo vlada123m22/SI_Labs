@@ -6,7 +6,7 @@ DD_ULTRASONIC::DD_ULTRASONIC(int trg_pin, int echo_pin) {
     this->echo_pin = echo_pin;
     this->distance = 0.0;
     this->hysteresisBand = 5.0;
-    this->targetSetpoint = 5.0;
+    this->targetSetpoint = 20.0;
 }
 
 void DD_ULTRASONIC::init() {
